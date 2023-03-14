@@ -269,7 +269,8 @@ a {
         .scroll-container a {
             font-size: 19px;
             padding: 6px 17px;
-            margin-right: 10px;
+            margin-right: 13px;
+            top: 88vh;
         }
     }
 /* End global rules */
