@@ -17,6 +17,7 @@ html {
 }
 body{
     font-family: 'Cairo', sans-serif;
+    position: relative;
 }
 ul {
     list-style: none;
@@ -228,6 +229,48 @@ a {
     .dots-down {
         bottom: 200px;
         left: 0;
+    }
+
+    .scroll-container {
+        position: absolute;
+        top: 0;
+        right:0;
+        height: 100%;
+        z-index: 100;
+        transition: var(--main-transition);
+    }
+    .scroll-container:before {
+        content: '';
+        display: block;
+        height:200vh ;
+        pointer-events: none;
+    }
+    .scroll-container a {
+        position: sticky;
+        top: 90vh;
+        cursor: pointer;
+        padding: 9px 22px;
+        font-size: 23px;
+        color: white;
+        background-color: var(--main-color);
+        margin-right: 16px;
+        border-radius: 50%;
+        transition: var(--main-transition);
+    }
+    .scroll-container a:hover{
+        background-color: var(--main-color-alt);
+    }
+    @media (min-width:1300px) {
+        .scroll-container a {
+            margin-right: 80px;
+        }
+    }
+    @media (max-width: 768px) {
+        .scroll-container a {
+            font-size: 19px;
+            padding: 6px 17px;
+            margin-right: 10px;
+        }
     }
 /* End global rules */
 /* Start header */
